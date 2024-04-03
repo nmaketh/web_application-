@@ -11,10 +11,10 @@ COPY package*.json ./
 RUN npm install
 
 # Copy the rest of your application code into the container
-COPY . .
+COPY . /usr/src/app/
 
 # Expose the port on which the application runs
 EXPOSE 8080
 
 # Specify the command to run the application
-CMD [ "node", "app.js" ]
+CMD [ "node", "src/app.js" ]
